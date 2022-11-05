@@ -13,13 +13,13 @@ namespace HMS.Repositories
 
         protected DbSet<TEntity> EntityDbSet { get; }
 
-        public BaseRepository([NotNull] HospitalDbContext context)
+        protected BaseRepository([NotNull] HospitalDbContext context)
         {
             Context = context;
             EntityDbSet = context.Set<TEntity>();
         }
 
-        public async virtual Task DeleteAsync(TKey id)
+        public virtual async Task DeleteAsync(TKey id)
         {
             var entity = await EntityDbSet.FindAsync(id);
 

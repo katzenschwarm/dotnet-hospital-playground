@@ -1,8 +1,7 @@
-﻿using HMS.Repositories;
-using HMS.Repositories.Contracts;
+﻿using HMS.Repositories.Contracts;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HMS.Services.Infrastructure.Depencency
+namespace HMS.Repositories.Infrastructure.Dependencies
 {
     public static class RepositoriesDependencyExtensions
     {
@@ -13,6 +12,7 @@ namespace HMS.Services.Infrastructure.Depencency
         public static void RegisterApplicationRepositories(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<IRoomRepository, RoomRepository>();
+            serviceCollection.AddTransient<IDatabase, Database>();
 
             // not possible with default DI, need to use SimpleInjector
             // serviceCollection.AddTransient<IRoomRepository, BaseRepository<Room, int>>();

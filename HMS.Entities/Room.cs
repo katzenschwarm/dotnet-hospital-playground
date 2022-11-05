@@ -16,3 +16,11 @@ namespace HMS.Entities
         public Doctor? Doctor { get; set; }
     }
 }
+
+
+/*
+ *   var room = await roomRepostiroy.findOne(id);
+ *   room.isDeleted = true; // Identity Map update entity: Room { id }
+ *   room.patients.forEach(p => patientRepository.delete(p)); // Identity Map update many: Patient { ids }
+ *   await em.flush(room); // All changed - build queries
+ */ 
