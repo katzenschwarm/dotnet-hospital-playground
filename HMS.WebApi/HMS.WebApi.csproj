@@ -20,6 +20,9 @@
   <ItemGroup>
     <ProjectReference Include="..\HMS.Database\HMS.Database.csproj" />
     <ProjectReference Include="..\HMS.Entities\HMS.Entities.csproj" />
+    <ProjectReference Include="..\HMS.Repositories\HMS.Repositories.csproj" />
+    <ProjectReference Include="..\HMS.Services.Contracts\HMS.Services.Contracts.csproj" />
+    <ProjectReference Include="..\HMS.Services\HMS.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

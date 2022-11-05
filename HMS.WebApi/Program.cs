@@ -1,9 +1,13 @@
 using HMS.Database;
+using HMS.Services.Infrastructure.Depencency;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.RegisterApplicationServices();
+builder.Services.RegisterApplicationRepositories();
+
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<HospitalDbContext>(options => 
